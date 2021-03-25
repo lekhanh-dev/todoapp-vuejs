@@ -1,6 +1,7 @@
 # todoapp
 
 hello
+hi
 
 ## Project setup
 
