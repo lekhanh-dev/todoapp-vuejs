@@ -1,7 +1,7 @@
 # todoapp
 
 hello v1
-feature_a update
+feature_a update update
 
 ## Project setup
 
