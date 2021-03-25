@@ -1,7 +1,6 @@
 # todoapp
 
-hello
-hi
+Build a todo app sample
 
 ## Project setup
 
