@@ -1,0 +1,87 @@
+:root {
+  --blue: rgb(74, 122, 252);
+  --white: #ffffff;
+  --gray: rgb(241, 241, 241);
+
+  font-size: 16px;
+  background: var(--gray);
+}
+html {
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--blue);
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--blue);
+}
+section section {
+  background: var(--white);
+  margin-bottom: 2.5rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px #d9d9d9;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: var(--white);
+  background: var(--blue);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="text"],
+select {
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  margin-right: 20px;
+}
+input[type="checkbox"] {
+  cursor: pointer;
+}
+select > option {
+  width: 100px;
+}
+.d-flex {
+  display: flex;
+}
+.flex-justify-c-center {
+  justify-content: center;
+}
+.flex-align-i-center {
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.d-flex {
+  display: flex;
+}
+.flex-col-1 {
+  flex: 8.33%;
+}
+.flex-col-7 {
+  flex: 58.33%;
+}
+.flex-col-2 {
+  flex: 16.66%;
+}
+.container {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 30px;
+  padding: 0 20px;
+}

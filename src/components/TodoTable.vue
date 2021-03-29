@@ -60,17 +60,8 @@ export default {
   },
   computed: {
     checked() {
-      let check = this.listTodo.length !== 0;
-      this.listTodo.forEach((todo) => {
-        if (!todo.completed) {
-          check = false;
-        }
-      });
-      return check;
+      return !this.listTodo.some((todo) => !todo.completed);
     },
-  },
-  mounted: function() {
-    // console.log(this.listTodo);
   },
 };
 </script>
@@ -78,18 +69,6 @@ export default {
 <style>
 .todos h2 {
   padding: 0 20px;
-}
-.d-flex {
-  display: flex;
-}
-.flex-col-1 {
-  flex: 8.33%;
-}
-.flex-col-7 {
-  flex: 58.33%;
-}
-.flex-col-2 {
-  flex: 16.66%;
 }
 .todos__header {
   padding: 20px;

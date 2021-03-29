@@ -2,8 +2,7 @@
   <section class="form">
     <button @click="showForm">{{ textButton }}</button>
     <div v-show="isShowForm">
-      <h2 v-if="todoSelected">Update todo</h2>
-      <h2 v-else>Add new todo</h2>
+      <h2>{{ todoSelected ? "Update todo" : "Add new todo" }}</h2>
       <input type="text" placeholder="Enter name" v-model="content" />
       <select v-model="level">
         <option value="2">High</option>
@@ -50,16 +49,6 @@ export default {
       });
     },
   },
-  created() {
-    // console.log(this.isShowForm);
-  },
-  // beforeUpdate() {
-  //   console.log("before update form");
-  //   if (this.todoSelected !== null) {
-  //     this.content = this.todoSelected.content;
-  //     this.level = this.todoSelected.important;
-  //   }
-  // },
   watch: {
     todoSelected: function(newData, oldData) {
       if (this.todoSelected) {
@@ -77,15 +66,4 @@ export default {
 };
 </script>
 
-<style>
-.form {
-  /* position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rbga(0, 0, 0, 0.4); */
-}
-</style>
+<style></style>

@@ -1,5 +1,5 @@
 <template>
-  <Fragment>
+  <div>
     <h2>Search todo</h2>
     <input
       type="text"
@@ -7,18 +7,15 @@
       @input="changeTextSearch($event)"
       placeholder="Enter name to search"
     />
-  </Fragment>
+  </div>
 </template>
 
 <script>
-import { Fragment } from "vue-fragment";
-
 export default {
   name: "control-search",
   props: {
     textSearch: String,
   },
-  components: { Fragment },
   methods: {
     changeTextSearch(event) {
       let textSearch = event.target.value;

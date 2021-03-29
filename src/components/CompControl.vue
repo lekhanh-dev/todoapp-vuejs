@@ -1,7 +1,7 @@
 <template>
   <section class="control">
     <control-search
-      :textSearch="textSearch"
+      :text-search="textSearch"
       @changeTextSearch="changeTextSearch"
     />
   </section>

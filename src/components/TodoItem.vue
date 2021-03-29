@@ -3,24 +3,11 @@
     <div class="todos__item-completed flex-col-1 d-flex flex-align-i-center">
       <input type="checkbox" :checked="todo.completed" @click="changeStatus" />
     </div>
-    <div
-      :class="[
-        'todos__item-name',
-        'd-flex',
-        'flex-col-7',
-        'flex-align-i-center',
-      ]"
-    >
+    <div class="todos__item-name d-flex flex-col-7 flex-align-i-center">
       {{ todo.content }}
     </div>
     <div
-      :class="[
-        'todos__item-important',
-        'flex-col-2',
-        'd-flex',
-        'flex-align-i-center',
-        'flex-justify-c-center',
-      ]"
+      class="todos__item-important flex-col-2 d-flex flex-align-i-center flex-justify-c-center"
     >
       <span :class="getImportantClass">{{ getImportantName }}</span>
     </div>
