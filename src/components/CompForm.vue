@@ -1,6 +1,6 @@
 <template>
   <section class="form">
-    <button @click="showForm">{{ textButton }}</button>
+    <button @click="showForm">{{ isShowForm ? "x" : "+" }}</button>
     <div v-show="isShowForm">
       <h2>{{ todoSelected ? "Update todo" : "Add new todo" }}</h2>
       <input type="text" placeholder="Enter name" v-model="content" />
@@ -28,7 +28,6 @@ export default {
     isShowForm: Boolean,
     todoSelected: Object,
   },
-  components: {},
   methods: {
     addTodo() {
       this.$emit("add", { content: this.content, important: this.level });
@@ -50,20 +49,12 @@ export default {
     },
   },
   watch: {
-    todoSelected: function(newData, oldData) {
+    todoSelected: function(newData) {
       if (this.todoSelected) {
         this.content = newData.content;
         this.level = newData.important;
       }
-      console.log("old data: " + JSON.stringify(oldData));
-    },
-  },
-  computed: {
-    textButton() {
-      return this.isShowForm ? "x" : "+";
     },
   },
 };
 </script>
-
-<style></style>

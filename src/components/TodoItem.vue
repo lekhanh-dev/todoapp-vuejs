@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 span {
   padding: 5px;
   border-radius: 5px;
