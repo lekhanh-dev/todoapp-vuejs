@@ -7,5 +7,3 @@ export default {
   name: "comp-header",
 };
 </script>
-
-<style></style>

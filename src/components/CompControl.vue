@@ -1,29 +1,20 @@
 <template>
   <section class="control">
-    <control-search
-      :text-search="textSearch"
-      @changeTextSearch="changeTextSearch"
+    <h2>Search todo</h2>
+    <input
+      type="text"
+      :value="textSearch"
+      @input="$emit('changeTextSearch', $event.target.value)"
+      placeholder="Enter name to search"
     />
   </section>
 </template>
 
 <script>
-import ControlSearch from "./ControlSearch.vue";
-
 export default {
   name: "comp-control",
   props: {
     textSearch: String,
   },
-  components: {
-    ControlSearch,
-  },
-  methods: {
-    changeTextSearch(text) {
-      this.$emit("changeTextSearch", text);
-    },
-  },
 };
 </script>
-
-<style></style>

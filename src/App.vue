@@ -121,11 +121,7 @@ export default {
     let listTodo = localStorage.getItem("listTodo");
     if (listTodo) {
       this.listTodo = JSON.parse(listTodo);
-    } else {
-      localStorage.setItem("listTodo", JSON.stringify([]));
     }
   },
 };
 </script>
-
-<style></style>

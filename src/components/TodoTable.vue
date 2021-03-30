@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .todos h2 {
   padding: 0 20px;
 }
